@@ -1,0 +1,307 @@
+/* RIMUOVI */
+
+aside {
+    background-color: purple;
+    display: flex;
+}
+
+main {
+    background-color: aqua;
+    display: flex;
+}
+
+/* .membership{background-color: gray;} */
+/* RIMUOVI */
+
+/* ------------------ GLOBALI ----------------- */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+}
+
+ion-icon {
+    font-size: 2em;
+}
+
+/* -------------------------------------------- */
+/* ------------------ HEADER ------------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.membership {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 30%;
+    height: 33.33%;
+}
+
+
+input {
+    border-radius: 25px;
+    border: solid 2px black;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.membership button {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #F4511E;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+/* -------------------------------------------- */
+/* ------------------ MAIN -------------------- */
+.superContainer {
+    display: flex;
+}
+
+main {
+    width: 75vw;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+main ul {
+    display: flex;
+}
+
+main nav li {
+    list-style-type: none;
+    padding-left: 3%;
+}
+
+.reccomendedForYou {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reccomendedForYou .imgProfile, .saved img {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    align-items: center;
+}
+
+.description p:last-of-type {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.list{
+    width: 100%;
+}
+
+.description ul, .saved ul {
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 1.3em;
+}
+
+main .description li:first-child , .saved li:first-child{
+    list-style-type: none;
+    padding: 0;
+}
+
+main .description li , .saved li{
+    list-style-type: "-";
+    padding: 2%;
+    font-size: small;
+}
+
+main .description button {
+    border-radius: 5px;
+}
+
+.addOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description i {
+    height: 1em;
+    width: 1em;
+}
+
+.description i:last-child {
+    rotate: 90deg;
+}
+
+.reccomendedForYou .imgPreview {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+}
+
+/* -------------------------------------------- */
+/* ------------------ ASIDE ------------------ */
+aside {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10% 0 5%;
+}
+/* DISCOVER ----------------------------------- */
+.discover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.discover div{
+    display: flex;
+    justify-content: center;
+}
+
+.discover .logo {
+    width: 2em;
+    height: auto;
+}
+.discover button{
+    padding: 0.8em 3em;
+    border-radius: 30px;
+    text-align: start;
+    background-color: transparent;
+    border: solid 1px black;
+}
+.discover .twitter:last-of-type{
+    margin-right: 10px;
+}
+.discover .twitter{
+    color: #37A1F3;
+}
+
+.discover a:last-of-type{
+    color: black;
+}
+/* -------------------------------------------- */
+/* RECCOMENDEDTOPICS -------------------------- */
+.reccomendedTopics ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.reccomendedTopics li{
+    list-style-type: none;
+    padding: 2% 3%;
+}
+.reccomendedTopics button{
+    border-radius: 15px;
+    text-align: center;
+    height: 30px;
+    width: auto;
+    background-color: rgb(209, 209, 209);
+    border: none;
+    padding: 5px 10px;
+}
+/* -------------------------------------------- */
+/* ------------------ FOLLOW ------------------ */
+.follow{
+    display: flex;
+    flex-direction: column;
+}
+
+.toFollow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.toFollow div{display: flex;}
+.toFollow img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.author {
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.toFollow button{
+    padding-right: 10px;
+    height: 25px;
+    padding: 0 30%;
+    border-radius: 20px;
+    background-color: transparent;
+    border: solid 1px black;
+}
+/* -------------------------------------------- */
+/* ------------------ DA RIFINIRE ------------- */
+/* ------------------ SAVED ------------------- */
+.saved{
+    display: flex;
+    flex-direction: column;
+}
+
+.saved div{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.saved ul {
+    display: flex;
+}
+
+.saved a{
+    color: #64AA5E;
+}
+/* -------------------------------------------- */
+hr {
+    border: solid 1px black;
+}
+
+/* -------------------------------------------- */
