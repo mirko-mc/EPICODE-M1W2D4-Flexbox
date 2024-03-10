@@ -4,6 +4,9 @@ aside {
     background-color: purple;
     display: flex;
 }
+aside .saved {
+    background-color: orange;
+}
 
 main {
     background-color: aqua;
@@ -226,11 +229,11 @@ aside {
 }
 /* -------------------------------------------- */
 /* RECCOMENDEDTOPICS -------------------------- */
-.reccomendedTopics ul{
+.reccomendedTopics ul, aside nav ul{
     display: flex;
     flex-wrap: wrap;
 }
-.reccomendedTopics li{
+.reccomendedTopics li, aside nav li{
     list-style-type: none;
     padding: 2% 3%;
 }
@@ -244,7 +247,7 @@ aside {
     padding: 5px 10px;
 }
 /* -------------------------------------------- */
-/* ------------------ FOLLOW ------------------ */
+/* FOLLOW ------------------------------------- */
 .follow{
     display: flex;
     flex-direction: column;
@@ -279,8 +282,7 @@ aside {
     border: solid 1px black;
 }
 /* -------------------------------------------- */
-/* ------------------ DA RIFINIRE ------------- */
-/* ------------------ SAVED ------------------- */
+/* SAVED -------------------------------------- */
 .saved{
     display: flex;
     flex-direction: column;
@@ -290,16 +292,21 @@ aside {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .saved ul {
     display: flex;
+}
+.saved li{
+    /* ha proprietà sovrascritte */
 }
 
 .saved a{
     color: #64AA5E;
 }
 /* -------------------------------------------- */
+/* ------------------ DA RIFINIRE ------------- */
 hr {
     border: solid 1px black;
 }
