@@ -1,26 +1,9 @@
-/* RIMUOVI */
-
-aside {
-    background-color: purple;
-    display: flex;
-}
-aside .saved {
-    background-color: orange;
-}
-
-main {
-    background-color: aqua;
-    display: flex;
-}
-
-/* .membership{background-color: gray;} */
-/* RIMUOVI */
-
 /* ------------------ GLOBALI ----------------- */
 * {
     margin: 0;
     border: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 i {
@@ -41,7 +24,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 1% 0 10%;
+    box-shadow: 0px 0px 10px 0px gray;
 }
 
 .logo {
@@ -59,7 +43,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-content: center;
-    width: 30%;
+    width: 32%;
     height: 33.33%;
 }
 
@@ -100,9 +84,13 @@ main ul {
 
 main nav li {
     list-style-type: none;
-    padding-left: 3%;
+    padding: 5% 0 1% 2%;
 }
-
+main nav a{
+    text-decoration-line: none;    
+    color: gray;
+    font-weight: bold;
+}
 .reccomendedForYou {
     display: flex;
     justify-content: space-between;
@@ -110,23 +98,39 @@ main nav li {
     flex-wrap: wrap;
 }
 
-.reccomendedForYou .imgProfile, .saved img {
+.reccomendedForYou .imgProfile,
+.saved img {
     width: 25px;
     height: 25px;
     border-radius: 5px;
 }
 
+article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vh;
+    padding-top: 7%;
+}
+
 .description {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 65%;
     align-items: center;
 }
 
-.description p:last-of-type {
-    white-space: nowrap;
+.description p:first-of-type,
+aside p {
+    padding-left: 2%;
+}
+
+.description p {
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .description .container {
@@ -136,39 +140,45 @@ main nav li {
     width: 100%;
 }
 
-.list{
+.list {
     width: 100%;
 }
 
-.description ul, .saved ul {
+.description ul,
+.saved ul {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     height: 1.3em;
 }
 
-main .description li:first-child , .saved li:first-child{
+main .description li:first-child,
+aside .saved .list li:first-child {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
-main .description li , .saved li{
+main .description li,
+aside .saved .list li {
     list-style-type: "-";
-    padding: 2%;
+    padding: 4%;
     font-size: small;
 }
 
 main .description button {
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 15% 20%;
 }
 
 .addOptions {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 7%;
 }
 
-.description i {
+.description i,
+.saved i {
     height: 1em;
     width: 1em;
 }
@@ -180,7 +190,7 @@ main .description button {
 .reccomendedForYou .imgPreview {
     display: flex;
     justify-content: flex-end;
-    width: 25%;
+    height: 100%;
 }
 
 /* -------------------------------------------- */
@@ -189,19 +199,22 @@ aside {
     width: 25vw;
     display: flex;
     flex-direction: column;
-    padding: 0 10% 0 5%;
+    padding: 1% 3%;
+    border-left: solid 1px gray;
 }
+
 /* DISCOVER ----------------------------------- */
-.discover{
+.discover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     width: 100%;
-    height: auto;
+    height: 15em;
 }
-.discover div{
+
+.discover div {
     display: flex;
     justify-content: center;
 }
@@ -210,34 +223,46 @@ aside {
     width: 2em;
     height: auto;
 }
-.discover button{
+
+.discover button {
     padding: 0.8em 3em;
     border-radius: 30px;
     text-align: start;
     background-color: transparent;
     border: solid 1px black;
 }
-.discover .twitter:last-of-type{
+
+.discover .twitter:last-of-type {
     margin-right: 10px;
 }
-.discover .twitter{
+
+.discover .twitter {
     color: #37A1F3;
 }
 
-.discover a:last-of-type{
+.discover a:last-of-type {
     color: black;
 }
+
 /* -------------------------------------------- */
 /* RECCOMENDEDTOPICS -------------------------- */
-.reccomendedTopics ul, aside nav ul{
+.reccomendedTopics {
+    padding-top: 3em;
+}
+
+.reccomendedTopics ul,
+aside nav ul {
     display: flex;
     flex-wrap: wrap;
 }
-.reccomendedTopics li, aside nav li{
+
+.reccomendedTopics li,
+aside nav li {
     list-style-type: none;
     padding: 2% 3%;
 }
-.reccomendedTopics button{
+
+.reccomendedTopics button {
     border-radius: 15px;
     text-align: center;
     height: 30px;
@@ -246,14 +271,17 @@ aside {
     border: none;
     padding: 5px 10px;
 }
+
 /* -------------------------------------------- */
 /* FOLLOW ------------------------------------- */
-.follow{
+.follow {
     display: flex;
     flex-direction: column;
+    padding-top: 3em;
+    height: 25em;
 }
 
-.toFollow{
+.toFollow {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -261,8 +289,11 @@ aside {
     padding: 10px 0;
 }
 
-.toFollow div{display: flex;}
-.toFollow img{
+.toFollow div {
+    display: flex;
+}
+
+.toFollow img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -273,7 +304,7 @@ aside {
     padding-left: 10px;
 }
 
-.toFollow button{
+.toFollow button {
     padding-right: 10px;
     height: 25px;
     padding: 0 30%;
@@ -281,14 +312,17 @@ aside {
     background-color: transparent;
     border: solid 1px black;
 }
+
 /* -------------------------------------------- */
 /* SAVED -------------------------------------- */
-.saved{
+.saved {
     display: flex;
     flex-direction: column;
+    height: 18em;
+    justify-content: space-around;
 }
 
-.saved div{
+.saved div {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -298,17 +332,17 @@ aside {
 .saved ul {
     display: flex;
 }
-.saved li{
-    /* ha proprietà sovrascritte */
-}
 
-.saved a{
+.saved a {
     color: #64AA5E;
 }
-/* -------------------------------------------- */
-/* ------------------ DA RIFINIRE ------------- */
-hr {
-    border: solid 1px black;
+
+aside nav {
+    padding-top: 3em;
 }
 
+/* -------------------------------------------- */
+hr {
+    border: solid 1px rgb(211, 204, 204);
+}
 /* -------------------------------------------- */
